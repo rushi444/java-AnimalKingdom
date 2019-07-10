@@ -1,6 +1,6 @@
 package animalKingdomApp; 
 
-public class Fish {
+public class Fish extends AbstractAnimal {
 
     public Fish(String name, int year){
         super(name, year); 
