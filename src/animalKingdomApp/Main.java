@@ -44,6 +44,53 @@ public class Main {
         animals.forEach(a -> System.out.println(a.getName() + "was discovered in " + a.getYear()));
 
         System.out.println("2.");
+        animals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+        animals.forEach(a -> System.out.println(a.getName()));
+
+        System.out.println("3.");
+        animals.sort((o1, o2) -> o1.move().compareToIgnoreCase(o2.move()));
+        animals.forEach(a -> System.out.println(a.getName() + ": " + a.move() + " "));
+
+        System.out.println("4.");
+        animals.forEach(a -> {
+            if (a.breath() == "lungs") {
+                System.out.println(a.getName());
+            }
+        });
+
+        System.out.println("5."); 
+        animals.forEach(a -> {
+            if ((a.breath() == "lungs") && (a.getYear() == 1758)){
+                System.out.println(a.getName());
+            }
+        });
+
+        System.out.println("6.");
+        animals.forEach(a -> {
+            if ((a.reproduce() == "eggs") && (a.breath() == "lungs")){
+                System.out.println(a.getName());
+            }
+        });
+
+        System.out.println("7.");
+        animals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+        animals.forEach(a -> {
+            if(a.getYear() == 1758) {
+                System.out.println(a.getName());
+            }
+        });
+
+        System.out.println("**Stretch**");
+        animals.sort((o1, o2) -> o1.getName().compareToIgnoreCase(o2.getName()));
+        animals.forEach(a -> {
+            if ((a.move() == "walk") && (a.breath() == "lungs") && (a.reproduce() == "live births")) {
+                System.out.println(a.getName());
+            }
+        });
+
+
+
+
 
     }
 }
