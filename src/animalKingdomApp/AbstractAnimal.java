@@ -23,4 +23,11 @@ public abstract class AbstractAnimal {
 
     public abstract String reproduce();
 
+    public int getYear() {
+        return year; 
+    }
+    public String getName(){
+        return name; 
+    }
+
 }
